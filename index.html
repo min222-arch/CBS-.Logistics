@@ -374,7 +374,35 @@ section{padding:60px 25px}
   background: var(--gold);
   color: #014c44;
 }
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
 
+.nav-brand img {
+  height: 42px;
+}
+
+.company-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  display: block;
+}
+
+.tagline {
+  font-size: 0.75rem;
+  color: #f4c430;
+  font-weight: 500;
+  margin-top: -2px;
+  letter-spacing: 0.4px;
+}
+  @media (max-width: 768px) {
+  .tagline {
+    font-size: 0.65rem;
+  }
 </style>
 </head>
 
@@ -396,9 +424,12 @@ section{padding:60px 25px}
 
 <nav class="navbar">
 <a class="nav-brand" href="#">
-<img src="png_cbsl_logo_-removebg-preview.png">
-<span>CBS Logistics Limited</span>
-  <span>Grown With Love, Delivered With Care</span>
+  <img src="png_cbsl_logo_-removebg-preview.png" alt="CBS Logistics Logo">
+
+  <div>
+    <span class="company-name">CBS Logistics Limited</span>
+    <span class="tagline">Grown With Love, Delivered With Care</span>
+  </div>
 </a>
 <div class="menu-toggle" onclick="navLinks.classList.toggle('show')"><i class="fas fa-bars"></i></div>
 <div class="nav-links" id="navLinks">
@@ -841,6 +872,7 @@ document.querySelector('.lightbox .close').onclick = () => {
 </script>
 </body>
 </html>
+
 
 
 

@@ -403,6 +403,54 @@ section{padding:60px 25px}
   .tagline {
     font-size: 0.65rem;
   }
+    /* ================================
+   TOOLTIP STYLING
+================================ */
+
+.tooltip{
+  position: fixed;
+}
+
+.tooltip-text{
+  position: absolute;
+  right: 75px;
+  background: #000;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* Arrow */
+.tooltip-text::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent #000;
+}
+
+/* Show tooltip on hover */
+.tooltip:hover .tooltip-text{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Mobile behavior */
+@media(max-width:768px){
+  .tooltip-text{
+    display: none;
+  }
 </style>
 </head>
 
@@ -719,6 +767,20 @@ to meet international market standards.
 <button class="btn" type="submit">Submit Inquiry</button>
 </form>
 </section>
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/254728608401?text=Hello%20CBS%20Logistics%2C%20I%20would%20like%20to%20make%20an%20inquiry."
+   class="float-whatsapp tooltip"
+   target="_blank">
+   <i class="fab fa-whatsapp"></i>
+   <span class="tooltip-text">Chat with us</span>
+</a>
+
+<!-- CALL FLOAT -->
+<a href="tel:+254728608401"
+   class="float-call tooltip">
+   <i class="fas fa-phone-alt"></i>
+   <span class="tooltip-text">Call now</span>
+</a>
 
 <section id="contact">
 <h2>Contact Us</h2>
@@ -897,6 +959,7 @@ document.querySelector('.lightbox .close').onclick = () => {
 </script>
 </body>
 </html>
+
 
 
 

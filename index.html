@@ -8,8 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-  <link rel="icon" type="png_cbsl_logo_-removebg-preview.png">
-
 <style>
 :root{
 --green:#a7c636;
@@ -1115,7 +1113,7 @@ align-items:start;
   <a href="aboutcbs.html">About</a>
   <a href="teaexport.html">Tea Export</a>
   <a href="servicescbs.html">Services</a>
-  <a href="CROPS.html">Crops</a>
+  <a href="Crops">Crops</a>
 </div>
 
 <!-- HAMBURGER -->
@@ -1147,20 +1145,9 @@ align-items:start;
   </div>
 
   <div class="hero-content">
-    <br>
-    <br>
     <h1>Connecting African Farmers to the World</h1>
-    <br>
-    <br>
     <p>Cold Chain • Processing • Packaging • Export</p>
-    <br>
-    <br>
- <a class="btn"
-href="https://wa.me/254728608401?text=Hello%20CBS%20Logistics.%20I%20would%20like%20to%20start%20an%20export%20shipment%20process."
-target="_blank">
-Get Started
-</a>
-
+    <button class="btn">Get Started</button>
   </div>
 
 </section>
@@ -1289,13 +1276,15 @@ Shipment Procedure.
 </p>
 
 <!-- ===== STEP 1 ===== -->
-<!-- ===== STEP 1 ===== -->
 <div class="proc-item">
 
 <div class="proc-head" onclick="openStep(1)">
 1. Farm Booking
 </div>
 
+
+
+<!-- SLIDER -->
 <div class="slider">
   <div class="slides">
     <img src="harvestuse.jpeg">
@@ -1304,39 +1293,61 @@ Shipment Procedure.
     <img src="harvest use2.jpeg">
   </div>
 
-
+  <button class="prev" onclick="moveSlide(this,-1)">❮</button>
+  <button class="next" onclick="moveSlide(this,1)">❯</button>
 
   <div class="dots"></div>
 </div>
+
+<!-- 👉 CENTERED CONTENT -->
+<div class="content">
 
 <p>Client booking → crop allocation → schedule confirmation</p>
 
 <div class="badge">Docs Needed</div>
 
 <ul class="check">
-<li>Booking form</li>
-<li>Farm details</li>
+<p>. Booking form</p>
+<p>. Farm details</p>
 </ul>
 
-<button class="btn" onclick="showForm(1)">Send Request</button>
+
 
 <div id="form1" style="display:none">
+
 <form onsubmit="return sendSilent(this)">
 <table class="req-table">
 
-<tr><td>Name</td><td><input name="entry.312796761" required></td></tr>
-<tr><td>Phone</td><td><input name="entry.27268637" required></td></tr>
-<tr><td>Email</td><td><input name="entry.2069509345"></td></tr>
-<tr><td>Message</td><td><textarea name="entry.1196604163"></textarea></td></tr>
+<tr>
+<td>Name</td>
+<td><input name="entry.312796761" required></td>
+</tr>
+
+<tr>
+<td>Phone</td>
+<td><input name="entry.27268637" required></td>
+</tr>
+
+<tr>
+<td>Email</td>
+<td><input name="entry.2069509345"></td>
+</tr>
+
+<tr>
+<td>Message</td>
+<td><textarea name="entry.1196604163"></textarea></td>
+</tr>
 
 </table>
 
 <button class="btn">Submit</button>
 </form>
-</div>
 
 </div>
 
+</div><!-- end content -->
+</div><!-- end proc-body -->
+</div><!-- end proc-item -->
 
 
 
@@ -1692,7 +1703,7 @@ font-weight:600;
   <div class="footer-col">
     <h4>Important Links</h4>
 
-    <a href="index.html">Home</a>
+    <a href="homecbs.html">Home</a>
     <a href="aboutcbs.html">About</a>
     <a href="teaexport.html">Tea Export</a>
     <a href="servicescbs.html">Services</a>
@@ -1735,7 +1746,7 @@ font-weight:600;
 </div>
 
 <div class="footer-bottom">
-© 2026 CBS Logistics Limited – Grown with Love. Delivered with Care.
+© 2025 CBS Logistics Limited – Grown with Love. Delivered with Care.
 </div>
 
 </footer>

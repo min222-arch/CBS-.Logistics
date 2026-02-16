@@ -4,1055 +4,1918 @@
 <meta charset="UTF-8">
 <title>CBS Logistics Limited</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CBS Logistics Limited – Cold chain logistics, agricultural value addition and global tea export solutions since 2017.">
-<!-- Favicon -->
-<link rel="icon" type="image/png" sizes="32x32" href="png_cbsl_logo_-removebg-preview.png">
-<link rel="icon" type="image/png" sizes="16x16" href="png_cbsl_logo_-removebg-preview.png">
-<link rel="cbs-touch-icon" href="C:\Users\Administrator\Downloads\hosting\png_cbsl_logo_-removebg-preview.png">
-<link rel="shortcut icon" href="/favicon.ico">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link rel="icon" type="png_cbsl_logo_-removebg-preview.png">
 
 <style>
 :root{
---green:#add136;
---teal:#006a5d;
---gold:#f4c430;
+--green:#a7c636;
+--teal:#0e5c4f;
+--gold:#f2b705;
 --dark:#0e0e0e;
---light:#f9f9f9;
---whatsapp:#25D366;
+--light:#f7f9f8;
 }
+
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#fff;color:#1e1e1e;line-height:1.65}
-section{padding:90px 60px}
-h1{font-size:3rem}
-h2{text-align:center;font-size:2.4rem;color:var(--teal);margin-bottom:20px}
-h3{color:var(--teal);margin:30px 0 10px}
-p{max-width:1000px;margin:0 auto 16px;text-align:center}
-.btn{background:var(--gold);border:none;border-radius:30px;padding:14px 32px;font-weight:700;cursor:pointer}
+html{scroll-behavior:smooth}
 
-/* NAV */
+/* ===== MODERN TECH NAVBAR ===== */
+
 .navbar{
-position:sticky;top:0;z-index:1000;
-padding:16px 60px;
-display:flex;justify-content:space-between;align-items:center;
-background:linear-gradient(270deg,var(--teal),#014c44,var(--green));
-}
-.nav-brand{display:flex;align-items:center;gap:12px;color:white;font-weight:700;text-decoration:none}
-.nav-brand img{height:42px}
-.menu-toggle{font-size:1.8rem;color:white;cursor:pointer}
-.nav-links{
-position:absolute;top:100%;right:40px;
-background:#014c44;display:none;
-flex-direction:column;gap:16px;
-padding:22px;border-radius:14px;
-}
-.nav-links.show{display:flex}
-.nav-link{color:white;text-decoration:none;font-weight:600}
-
-/* HERO */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;color:white;overflow:hidden}
-.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.5s}
-.hero-slide.active{opacity:1}
-.hero-slide img,.hero-slide video{width:100%;height:100%;object-fit:cover}
-.hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.65)}
-.hero-content{z-index:2;text-align:center}
-
-/* GRID */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;margin-top:40px}
-
-/* IMAGE CARD */
-.image-card{
-background:#fff;border-radius:18px;
-box-shadow:0 15px 35px rgba(0,0,0,.12);
-overflow:hidden;transition:.4s;
-}
-.image-card:hover{transform:translateY(-10px);box-shadow:0 25px 50px rgba(0,0,0,.18)}
-.image-card img{width:100%;height:220px;object-fit:cover}
-.image-card div{text-align:center;padding:20px}
-
-/* SERVICES */
-.service-icon{font-size:2rem;color:var(--teal);margin-bottom:10px;transition:.4s}
-.image-card:hover .service-icon{transform:scale(1.15) rotate(-6deg);color:var(--gold)}
-.service-more{display:none;font-size:.9rem;color:#444}
-.image-card.active .service-more{display:block}
-
-/* ICON CARD */
-.icon-card{background:#f9f9f9;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);text-align:center}
-.icon-card i{font-size:2.4rem;color:var(--teal);margin-bottom:14px}
-
-/* ABOUT SLIDER */
-.about-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.about-slider{position:relative;height:320px;border-radius:18px;overflow:hidden}
-.about-slide{position:absolute;inset:0;opacity:0;transition:1.2s}
-.about-slide.active{opacity:1}
-.about-slide img{width:100%;height:100%;object-fit:cover}
-
-/* CROPS */
-.crop-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
-.crop-item{background:#fff;border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.1);transition:.35s}
-.crop-item:hover{transform:translateY(-8px)}
-.crop-item img{width:100%;height:170px;object-fit:cover}
-.crop-item h4{text-align:center;padding:12px;background:linear-gradient(90deg,var(--teal),var(--green));color:white}
-
-/* TABLE */
-.table-wrap{overflow-x:auto;margin-top:30px}
-table{width:100%;border-collapse:collapse;min-width:900px}
-thead{background:var(--teal);color:white}
-th,td{padding:14px;border:1px solid #ddd}
-
-/* PROCESS */
-.process-box{max-width:1100px;margin:50px auto;background:var(--light);padding:40px;border-radius:24px}
-.process-steps{display:flex;justify-content:space-between;position:relative}
-.process-steps::before{content:"";position:absolute;top:50%;left:0;right:0;height:6px;background:#ddd}
-.progress{position:absolute;top:50%;left:0;height:6px;background:var(--gold);width:0%}
-.step{width:60px;height:60px;border-radius:50%;background:#ddd;display:flex;align-items:center;justify-content:center;font-size:1.4rem;cursor:pointer;z-index:2}
-.step.active{background:var(--teal);color:white}
-.step.done{background:var(--gold)}
-
-/* FOOTER */
-.footer{background:var(--dark);color:#ddd;padding:90px 60px 30px;border-top-left-radius:60px;border-top-right-radius:60px}
-.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px}
-.footer-logo img{max-width:160px}
-.footer h4{color:var(--gold)}
-.footer a{color:#ddd;text-decoration:none;display:block;margin-bottom:8px}
-.footer-bottom{text-align:center;border-top:1px solid #333;padding-top:20px;margin-top:40px;font-size:.85rem}
-
-.whatsapp-float{
-position:fixed;
-bottom:22px;
-right:22px;
-background:var(--whatsapp);
-width:58px;
-height:58px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:2rem;
-color:white;
-text-decoration:none;
-animation:pulse 1.8s infinite;
-}
-
-@keyframes pulse{
-0%{transform:scale(1)}
-50%{transform:scale(1.15)}
-100%{transform:scale(1)}
-}
-
-
-@media(max-width:900px){
-section{padding:60px 25px}
-.about-wrapper{grid-template-columns:1fr}
-}
-/* CALL FLOAT */
-.call-float{
-  position:fixed;
-  bottom:90px;
-  right:22px;
-  background:#0a8f08;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:1.8rem;
-  color:white;
-  text-decoration:none;
-  box-shadow:0 0 0 rgba(10,143,8,.7);
-  animation:pulse 2s infinite;
-  z-index:1000;
-}
-.top-bar{
   position:fixed;
   top:0;
   width:100%;
-  background:#006a5d;
-  color:#fff;
-  padding:8px 30px;
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  font-size:.9rem;
   z-index:2000;
-}
-.navbar{top:36px;}
 
-/* WHATSAPP ANIMATION */
-.whatsapp-float{
-  animation:floatShake 3s infinite;
-}
+  padding:12px 60px;
 
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(10,143,8,.6)}
-  70%{box-shadow:0 0 0 20px rgba(10,143,8,0)}
-  100%{box-shadow:0 0 0 0 rgba(10,143,8,0)}
-}
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 
-@keyframes floatShake{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-6px)}
-}
-/* ===== MOBILE FIX ===== */
-@media (max-width: 768px) {
+  /* GLASS TECH LOOK */
+  background:rgba(8,45,40,.78);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
 
-  .top-bar {
-    flex-direction: column;
-    gap: 6px;
-    padding: 6px 10px;
-    font-size: 0.75rem;
-  }
+  border-bottom:1px solid rgba(255,255,255,.08);
 
-  .top-left span {
-    margin-right: 10px;
-    display: inline-block;
-  }
-
-  .top-social {
-    display: none;
-  }
-
-  .navbar {
-    top: 70px;
-    padding: 12px 20px;
-  }
-
-  .nav-brand img {
-    height: 34px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  section {
-    padding: 60px 20px;
-  }
+  transition:.4s ease;
 }
 
-/* Hide social icons on mobile */
-@media (max-width: 768px) {
-  .top-social {
-    display: none;
+/* SCROLL EFFECT */
+.navbar.scrolled{
+  background:rgba(6,34,30,.95);
+  box-shadow:0 12px 25px rgba(0,0,0,.25);
+  padding:8px 60px;
+}
+
+/* BRAND AREA */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:white;
+}
+
+.brand img{
+  height:54px;
+  background:white;
+  padding:6px;
+  border-radius:12px;
+
+  transition:.4s;
+}
+
+.brand h3{
+  font-size:18px;
+  letter-spacing:.8px;
+  font-weight:700;
+
+  background:linear-gradient(90deg,#fff,var(--gold));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.brand small{
+  opacity:.85;
+  letter-spacing:.6px;
+  font-size:11px;
+}
+
+/* ===== TECH NAV LINKS ===== */
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.nav-links a{
+  color:#eaf5f2;
+
+  padding:8px 14px;
+  border-radius:10px;
+
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  letter-spacing:.7px;
+
+  position:relative;
+  transition:.35s ease;
+}
+
+/* HOVER BACKGROUND */
+.nav-links a:hover{
+  background:rgba(255,255,255,.08);
+  color:white;
+  transform:translateY(-1px);
+}
+
+/* TECH LINE */
+.nav-links a:after{
+  content:"";
+  position:absolute;
+
+  left:50%;
+  bottom:2px;
+
+  width:0%;
+  height:2px;
+
+  background:linear-gradient(90deg,var(--gold),#fff5a8);
+
+  transition:.35s ease;
+  transform:translateX(-50%);
+}
+
+/* GLOW LINE */
+.nav-links a:before{
+  content:"";
+  position:absolute;
+
+  left:50%;
+  bottom:2px;
+
+  width:0%;
+  height:2px;
+
+  background:var(--gold);
+  filter:blur(5px);
+
+  transition:.35s ease;
+  transform:translateX(-50%);
+  opacity:.6;
+}
+
+.nav-links a:hover:after,
+.nav-links a:hover:before{
+  width:60%;
+}
+
+/* ACTIVE TAB */
+.nav-links a.active{
+  background:rgba(242,183,5,.12);
+  color:#fff9d9;
+}
+
+.nav-links a.active:after{
+  width:60%;
+}
+
+/* CTA BUTTON */
+.nav-links .cta{
+  background:
+    linear-gradient(135deg,var(--gold),#d9a300);
+
+  color:#07362e !important;
+
+  padding:9px 18px;
+  border-radius:30px;
+
+  margin-left:12px;
+
+  box-shadow:
+    0 6px 14px rgba(242,183,5,.25),
+    inset 0 0 0 1px rgba(255,255,255,.3);
+
+  transition:.3s;
+}
+
+.nav-links .cta:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 20px rgba(242,183,5,.35);
+}
+
+
+
+
+/* ===== PERFECT FULL WIDTH HERO ===== */
+
+.hero{
+  position:relative;
+
+  /* CRITICAL FIXES */
+  padding:0 !important;
+  margin:0 !important;
+
+  width:100vw;
+  max-width:100%;
+
+  height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+}
+
+/* container */
+.hero-slides{
+  position:absolute;
+  top:0;
+  left:0;
+
+  width:100vw;
+  height:100vh;
+}
+
+/* ALL IMAGES FULL SCREEN */
+.hero-slides img{
+  position:absolute;
+  top:0;
+  left:0;
+
+  width:100vw;
+  height:100vh;
+
+  object-fit:cover;
+  object-position:center;
+
+  opacity:0;
+  animation:heroFade 25s infinite;
+}
+
+/* SOFT OVERLAY */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    rgba(6,34,30,.32),
+    rgba(0,0,0,.28)
+  );
+
+  z-index:1;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+/* ===== HERO TEXT PURE WHITE ===== */
+
+.hero-content h1{
+  color:#ffffff !important;
+  text-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+
+.hero-content p{
+  color:#ffffff !important;
+  opacity:.95;
+}
+
+/* optional: make button text darker for contrast */
+.hero-content .btn{
+  color:#07362e;
+}
+
+/* TIMING FOR EACH IMAGE */
+.hero-slides img:nth-child(1){ animation-delay:0s }
+.hero-slides img:nth-child(2){ animation-delay:5s }
+.hero-slides img:nth-child(3){ animation-delay:10s }
+.hero-slides img:nth-child(4){ animation-delay:15s }
+.hero-slides img:nth-child(5){ animation-delay:20s }
+h1{
+  text-emphasis-color: var(--light);
+}
+/* FADE ANIMATION */
+@keyframes heroFade{
+  0%{ opacity:0; transform:scale(1.05); }
+  8%{ opacity:1; }
+  20%{ opacity:1; }
+  28%{ opacity:0; }
+  100%{ opacity:0; transform:scale(1.12); }
+}
+/* prevent navbar from pushing hero */
+#home{
+  margin-top:0;
+}
+@keyframes heroFade{
+  0%{
+    opacity:.3;
+    transform:scale(1);
   }
+
+  8%{
+    opacity:1;
+  }
+
+  25%{
+    opacity:1;
+  }
+
+  33%{
+    opacity:.3;
+  }
+
+  100%{
+    opacity:.3;
+    transform:scale(1.05);
+  }
+}
+
+
+
+/* SECTIONS */
+section{padding:90px 60px}
+.alt{background:var(--light)}
+
+/* CARDS */
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+
+.card{background:white;padding:20px;border-radius:14px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+
+/* PROCEDURE */
+.proc-item{margin-bottom:12px;border-radius:12px;overflow:hidden;background:white}
+.proc-head{padding:15px;cursor:pointer;background:#fff;font-weight:600}
+.proc-body{max-height:0;overflow:hidden;transition:.5s}
+.proc-body img{width:100%;height:210px;object-fit:cover}
+.proc-body .content{padding:15px}
+
+.badge{background:#eef6f2;padding:4px 10px;border-radius:20px;font-size:12px;margin:3px;display:inline-block}
+
+/* COUNTRIES */
+.country-card{
+text-align:center;
+padding:15px;
+border-radius:12px;
+background:white;
+box-shadow:0 5px 12px rgba(0,0,0,.08);
+}
+
+.flag{font-size:34px;margin-bottom:6px}
+
+/* CHECKLIST */
+.check li{
+list-style:none;
+margin:8px 0;
+padding-left:px;
+position:relative;
+}
+
+.check li:before{
+content:"✓";
+position:absolute;
+left:0;
+color:var(--teal);
+font-weight:bold;
+}
+
+/* BUTTON */
+.btn{
+background:var(--gold);border:none;padding:12px 24px;
+border-radius:30px;font-weight:700;margin-top:10px;cursor:pointer
+}
+
+/* FLOAT */
+.float{
+position:fixed;bottom:25px;right:25px;
+background:#25d366;color:white;padding:15px;
+border-radius:50%;font-size:26px;z-index:3000
+}
+
+.footer{background:var(--dark);color:#ddd;padding:60px;text-align:center}
+
+@media(max-width:900px){
+section{padding:60px 20px}
+.navbar{padding:10px 20px}
+}
+/* ===== PREMIUM CERTIFICATION SECTION ===== */
+
+#certifications{
+  position:relative;
+}
+
+/* grid */
+.cert-row{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:22px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* card */
+.cert{
+  text-align:center;
+  background:white;
+  padding:16px 12px;
+  border-radius:16px;
+
+  border:1px solid rgba(14,92,79,.12);
+
+  box-shadow:
+    0 10px 25px rgba(14,92,79,.06),
+    inset 0 0 0 1px rgba(255,255,255,.7);
+
+  transition:.4s;
+  position:relative;
+  overflow:hidden;
+}
+
+/* gold top line */
+.cert:before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;
+  height:4px;
+  background:linear-gradient(90deg,var(--gold),#ffd84d);
+  opacity:.7;
+}
+
+/* logo */
+.cert img{
+  width:100%;
+  max-height:74px;
+  object-fit:contain;
+
+  filter:grayscale(100%);
+  opacity:.85;
+  transition:.4s;
+}
+
+/* title */
+.cert p{
+  margin-top:8px;
+  font-weight:700;
+  color:var(--teal);
+  font-size:13px;
+  letter-spacing:.3px;
+}
+
+/* verified badge */
+.cert .v-badge{
+  background:#eef6f2;
+  color:var(--teal);
+  font-size:11px;
+  padding:3px 8px;
+  border-radius:20px;
+  display:inline-block;
+  margin-top:6px;
+}
+
+/* hover */
+.cert:hover{
+  transform:translateY(-6px);
+  box-shadow:
+    0 14px 30px rgba(14,92,79,.12);
+}
+
+.cert:hover img{
+  filter:grayscale(0%);
+  opacity:1;
+}
+
+/* mobile */
+@media(max-width:700px){
+  .cert-row{
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+  }
+
+  .cert{
+    padding:12px 8px;
+  }
+}
+/* audit year tag */
+.audit{
+  display:inline-block;
+  margin-top:6px;
+  font-size:11px;
+  padding:3px 8px;
+  border-radius:20px;
+  background:rgba(242,183,5,.15);
+  color:#7a5c00;
+  font-weight:700;
+}
+
+/* renewal line */
+.renew{
+  font-size:10px;
+  color:#6c7a75;
+  margin-top:4px;
+}
+.cert-photos{
+  display:flex;
+  gap:6px;
+  margin-top:8px;
+  justify-content:center;
+}
+
+.cert-photos img{
+  width:60px;
+  height:50px;
+  object-fit:cover;
+  border-radius:6px;
+  cursor:pointer;
+  border:1px solid #e3e3e3;
+  transition:.3s;
+}
+
+.cert-photos img:hover{
+  transform:scale(1.08);
+  border-color:var(--gold);
+}
+
+
+/* SHOW USER THEY MUST CLICK */
+.proc-head{
+display:flex;
+justify-content:space-between;
+align-items:center;
+transition:.3s;
+}
+
+.proc-head:hover{
+background:#eef6f2;
+}
+
+.indicator{
+font-size:12px;
+color:var(--teal);
+animation:bounce 1.6s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-3px)}
+}
+
+
+
+
+
+@keyframes imgFade{
+to{opacity:1;transform:translateY(0)}
+}
+/* ===== REQUEST TABLE STYLING ===== */
+
+.req-table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0 10px;
+  margin-top:10px;
+}
+
+/* ========== PREMIUM FORM TABLE ========== */
+
+.request-box{
+  background:linear-gradient(150deg,#ffffff,#f1f7f5);
+  border:1px solid rgba(14,92,79,.15);
+  border-radius:18px;
+  padding:18px;
+  margin-top:12px;
+  box-shadow:
+    0 10px 25px rgba(14,92,79,.06),
+    inset 0 0 0 1px rgba(255,255,255,.6);
+  backdrop-filter:blur(6px);
+  animation:slideUp .4s ease;
+}
+
+/* TABLE STRUCTURE */
+.req-table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0 12px;
+}
+
+/* LABEL SIDE */
+.req-table td:first-child{
+  font-weight:700;
+  color:var(--teal);
+  width:130px;
+  font-size:13px;
+  letter-spacing:.3px;
+  padding-top:14px;
+}
+
+/* INPUT WRAPPER EFFECT */
+.req-table td:last-child{
+  position:relative;
+}
+
+/* INPUTS */
+.req-table input,
+.req-table textarea{
+  width:100%;
+  padding:13px 14px 13px 38px;
+  border:1px solid #cfdcd7;
+  border-radius:12px;
+  background:white;
+  font-size:14px;
+  transition:.3s;
+}
+
+/* ICONS INSIDE INPUTS */
+.req-table td:last-child:before{
+  position:absolute;
+  left:12px;
+  top:14px;
+  font-family:"Font Awesome 6 Free";
+  font-weight:900;
+  color:var(--teal);
+  opacity:.6;
+}
+
+.req-table tr:nth-child(1) td:last-child:before{content:"\f007"}
+.req-table tr:nth-child(2) td:last-child:before{content:"\f095"}
+.req-table tr:nth-child(3) td:last-child:before{content:"\f0e0"}
+.req-table tr:nth-child(4) td:last-child:before{content:"\f4ad"}
+
+/* TEXTAREA */
+.req-table textarea{
+  min-height:100px;
+  resize:none;
+}
+
+/* FOCUS */
+.req-table input:focus,
+.req-table textarea:focus{
+  border-color:var(--gold);
+  box-shadow:
+    0 0 0 3px rgba(242,183,5,.18),
+    0 6px 14px rgba(14,92,79,.1);
+  outline:none;
+}
+
+/* PLACEHOLDER */
+.req-table input::placeholder,
+.req-table textarea::placeholder{
+  color:#a5b8b1;
+}
+
+/* SUBMIT BUTTON */
+.request-box .btn{
+  width:100%;
+  background:
+    linear-gradient(140deg,var(--gold),#d9a300);
+  color:#07362e;
+  font-weight:800;
+  letter-spacing:.5px;
+  margin-top:8px;
+  box-shadow:0 6px 14px rgba(242,183,5,.25);
+  transition:.3s;
+}
+
+.request-box .btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 20px rgba(242,183,5,.35);
+}
+
+/* ANIMATIONS */
+@keyframes slideUp{
+  from{opacity:0;transform:translateY(15px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+.req-table,
+.req-table tr,
+.req-table td{
+  display:block;
+  width:100%;
+}
+
+.req-table td:first-child{
+  padding:4px 4px 0 4px;
+}
+
+}
+/* ===== MODERN CURVED FOOTER ===== */
+
+.footer{
+  position:relative;
+  background:linear-gradient(160deg,var(--teal),#07362e);
+  color:#e6eeeb;
+  padding:90px 30px 30px;
+  margin-top:70px;
+
+  border-radius:70px 70px 0 0;
+}
+
+/* soft wave */
+.footer:before{
+  content:"";
+  position:absolute;
+  top:-28px;
+  left:0;
+  width:100%;
+  height:56px;
+  background:inherit;
+  border-radius:50% 50% 0 0;
+  opacity:.35;
+}
+
+/* GRID */
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:40px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* HEADINGS */
+.footer h4{
+  color:#fff;
+  margin-bottom:12px;
+  font-size:16px;
+  letter-spacing:.4px;
+}
+
+/* LOGO */
+.footer-logo img{
+  height:68px;
+  background:white;
+  padding:6px;
+  border-radius:12px;
+  margin-bottom:10px;
+}
+
+/* TEXT */
+.footer p{
+  font-size:14px;
+  line-height:1.6;
+  color:#cfe5de;
+}
+
+/* LINKS */
+.footer a{
+  display:block;
+  color:#cfe5de;
+  text-decoration:none;
+  margin:7px 0;
+  font-size:14px;
+  transition:.3s;
+}
+
+.footer a:hover{
+  color:var(--gold);
+  transform:translateX(4px);
+}
+
+/* SOCIAL */
+.footer-social{
+  margin-top:10px;
+}
+
+.footer-social a{
+  width:38px;
+  height:38px;
+  background:rgba(255,255,255,.08);
+  border-radius:50%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-right:8px;
 }
 
 .footer-social a:hover{
-  color:var(--gold);
-}
-/* ===== PICTORIAL SEGMENT ===== */
-
-#gallery{
-  background:#f9f9f9;
+  background:var(--gold);
+  color:#01362f;
 }
 
-.gallery-wrapper{
-  position:relative;
-  overflow:hidden;
-  margin-top:40px;
-}
-
-.gallery-track{
-  display:flex;
-  gap:25px;
-  transition:transform .7s ease;
-}
-
-.gallery-item{
-  min-width:280px;
-  position:relative;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 15px 40px rgba(0,0,0,.15);
-  cursor:pointer;
-}
-
-.gallery-item img,
-.gallery-item video{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  display:block;
-}
-
-.gallery-item span{
-  position:absolute;
-  bottom:0;
-  width:100%;
-  padding:14px;
-  background:rgba(0,0,0,.6);
-  color:#fff;
-  font-weight:600;
+/* BOTTOM */
+.footer-bottom{
   text-align:center;
+  margin-top:30px;
+  padding-top:16px;
+  border-top:1px solid rgba(255,255,255,.1);
+  font-size:13px;
+  color:#b8d1c9;
 }
 
-.gallery-btn{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,.6);
-  border:none;
-  color:white;
-  font-size:2rem;
-  padding:10px 16px;
+/* MOBILE */
+@media(max-width:800px){
+  .footer-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .footer a:hover{
+    transform:none;
+  }
+}
+
+
+/* ===== GLOBAL SLIDER STYLE FOR ALL STEPS ===== */
+
+/* ===== SMALL UNIFORM SLIDER ===== */
+
+/* ===== UNIFORM SMALL SLIDER ===== */
+
+/* ===== KEEP ORIGINAL LOOK BUT UNIFORM ===== */
+
+.slider{
+  width: 100%;                 /* keep your layout */
+  max-width: 520px;            /* same as your design */
+  margin: 10px auto;
+  background:#fafafa;
+  padding:6px;
+  border-radius:10px;
+}
+
+/* ONE BY ONE SLIDE */
+.slides{
+  display:flex;
+  align-items:center;          /* center short images */
+  transition: transform 1.2s ease-in-out;
+}
+
+/* 👉 THIS IS THE MAGIC */
+.slides img{
+
+  width:100%;                  /* each slide full frame */
+  height:240px;                /* uniform window */
+
+  object-fit:cover;          /* ✅ NO CUTTING */
+  object-position:center;
+
+  background:#f5f5f5;          /* nice frame */
+
+  flex-shrink:0;
   cursor:pointer;
-  border-radius:50%;
-  z-index:5;
 }
 
-.gallery-btn.left{left:10px}
-.gallery-btn.right{right:10px}
 
-/* Lightbox */
 .lightbox{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.9);
+  background:rgba(0,0,0,.88);
   display:none;
   align-items:center;
   justify-content:center;
-  z-index:3000;
+  z-index:9999;
 }
 
 .lightbox img{
-  max-width:90%;
-  max-height:90%;
+  max-width:94%;
+  max-height:94vh;
+
+  object-fit:contain;   /* IMPORTANT – full body visible */
+  border-radius:10px;
 }
 
 .lightbox .close{
   position:absolute;
-  top:20px;
-  right:30px;
-  font-size:3rem;
+  top:15px;
+  right:20px;
   color:white;
+  font-size:32px;
   cursor:pointer;
 }
-/* ===============================
-   TOP BAR SOCIAL ICONS FIX
-================================ */
 
-.top-social a {
-  color: #ffffff;
-  background: rgba(255,255,255,0.18);
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-/* hover effect */
-.top-social a:hover {
-  background: var(--gold);
-  color: #014c44;
-  transform: translateY(-3px);
-}
-
-/* footer social icons */
-.footer-social a {
-  color: #ddd;
-  background: rgba(255,255,255,0.08);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 12px;
-  transition: 0.3s;
-}
-
-.footer-social a:hover {
-  background: var(--gold);
-  color: #014c44;
-}
-.nav-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-}
-
-.nav-brand img {
-  height: 42px;
-}
-
-.company-name {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: white;
-  display: block;
-}
-
-.tagline {
-  font-size: 0.75rem;
-  color: #f4c430;
-  font-weight: 500;
-  margin-top: -2px;
-  letter-spacing: 0.4px;
-}
-  @media (max-width: 768px) {
-  .tagline {
-    font-size: 0.65rem;
-  }
-    /* ================================
-   TOOLTIP STYLING
-================================ */
-
-.tooltip{
-  position: fixed;
-}
-
-.tooltip-text{
-  position: absolute;
-  right: 75px;
-  background: #000;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(5px);
-  transition: all 0.3s ease;
-  pointer-events: none;
-}
-
-/* Arrow */
-.tooltip-text::after{
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -6px;
-  transform: translateY(-50%);
-  border-width: 6px;
-  border-style: solid;
-  border-color: transparent transparent transparent #000;
-}
-
-/* Show tooltip on hover */
-.tooltip:hover .tooltip-text{
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-/* Mobile behavior */
-@media(max-width:768px){
-  .tooltip-text{
-    display: none;
-  }
-  /* ===============================
- FLOATING CONTACT PREMIUM
-================================ */
-
-.float-whatsapp,
-.float-call{
-  position: fixed;
-  right: 22px;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.7rem;
-  color: #fff;
-  text-decoration: none;
-  z-index: 9999;
-  opacity: 0;
-  transform: translateX(80px);
-  transition: all 0.6s ease;
-}
-
-/* Positions */
-.float-whatsapp{bottom:22px;background:#25D366;}
-.float-call{bottom:92px;background:#0a8f08;}
-
-/* Show animation */
-.float-show{
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Hover glow */
-.float-whatsapp:hover{
-  box-shadow:0 0 25px rgba(37,211,102,.7);
-}
-.float-call:hover{
-  box-shadow:0 0 25px rgba(10,143,8,.7);
-}
-
-/* TOOLTIP */
-.tooltip-text{
+/* ARROWS */
+.prev,.next{
   position:absolute;
-  right:75px;
-  background:#000;
-  color:#fff;
-  padding:8px 14px;
-  border-radius:8px;
-  font-size:.85rem;
-  opacity:0;
-  visibility:hidden;
-  transition:.3s;
-  white-space:nowrap;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,.5);
+  color:white;
+  border:none;
+  padding:8px 12px;
+  cursor:pointer;
+  border-radius:50%;
+  z-index:10;
 }
 
-.tooltip:hover .tooltip-text{
-  opacity:1;
-  visibility:visible;
+.prev{left:10px}
+.next{right:10px}
+
+/* DOTS */
+.dots{text-align:center;padding:6px}
+
+.dot{
+  width:10px;
+  height:10px;
+  background:#ccc;
+  border-radius:50%;
+  display:inline-block;
+  margin:3px;
+  cursor:pointer;
 }
 
-/* Mobile bottom bar */
-.mobile-contact-bar{
+.active-dot{background:var(--gold)}
+
+@media(max-width:700px){
+  .slides img{ height:230px }
+}
+.cert-desc{
+  font-size:12px;
+  color:#4a5c56;
+  margin-top:6px;
+  line-height:1.4;
   display:none;
+  background:#f3f8f6;
+  padding:8px;
+  border-radius:8px;
 }
 
-@media(max-width:768px){
-  .float-whatsapp,
-  .float-call{
-    display:none;
-  }
+.cert .more-btn{
+  font-size:11px;
+  color:var(--teal);
+  margin-top:6px;
+  cursor:pointer;
+  font-weight:700;
+}
+.proc-item{
+  text-align:center;
+}
 
-  .mobile-contact-bar{
+.proc-item p{
+  text-align:center;
+  margin-top:10px;
+}
+
+.proc-item .req-table{
+  margin:0 auto;
+}
+
+.proc-item .badge{
+  display:inline-block;
+}
+/* ===== HAMBURGER BUTTON ===== */
+
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:6px;
+  cursor:pointer;
+  z-index:3000;
+}
+
+.hamburger span{
+  width:26px;
+  height:3px;
+
+  background:linear-gradient(90deg,#fff,var(--gold));
+  border-radius:10px;
+
+  transition:.4s;
+}
+
+/* ANIMATION WHEN OPEN */
+.hamburger.active span:nth-child(1){
+  transform:rotate(45deg) translate(5px,6px);
+}
+
+.hamburger.active span:nth-child(2){
+  opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+  transform:rotate(-45deg) translate(6px,-7px);
+}
+
+/* ===== MOBILE MENU ===== */
+
+@media(max-width:900px){
+
+  .hamburger{
     display:flex;
+  }
+
+  .nav-links{
     position:fixed;
-    bottom:0;
-    left:0;
+    top:0;
+    right:-100%;
+
+    height:100vh;
+    width:70%;
+
+    flex-direction:column;
+    justify-content:center;
+
+    background:rgba(6,34,30,.96);
+    backdrop-filter:blur(14px);
+
+    padding:40px;
+
+    transition:.5s ease;
+
+    border-left:1px solid rgba(255,255,255,.08);
+  }
+
+  .nav-links a{
+    margin:10px 0;
+    font-size:16px;
+  }
+
+  .nav-links.show{
     right:0;
-    background:#006a5d;
-    z-index:9999;
   }
 
-  .mobile-contact-bar a{
-    flex:1;
-    text-align:center;
-    padding:14px;
-    color:white;
-    font-weight:600;
-    text-decoration:none;
-    border-right:1px solid rgba(255,255,255,.2);
-  }
+}
+/* OFFICE LOCATION CARD */
+.office-card{
+background:rgba(255,255,255,.05);
+padding:25px 22px;
+border-radius:16px;
+backdrop-filter:blur(6px);
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 20px 50px rgba(0,0,0,.25);
+transition:.35s ease;
+}
 
-  .mobile-contact-bar a:last-child{
-    border-right:none;
-    background:#25D366;
-  }
+.office-card:hover{
+transform:translateY(-6px);
+box-shadow:0 35px 80px rgba(0,0,0,.35);
+}
+
+.office-card h4{
+margin-bottom:14px;
+color:#fff;
+letter-spacing:.5px;
+}
+
+.office-card p{
+font-size:.9rem;
+margin:8px 0;
+opacity:.9;
+}
+
+.office-card i{
+margin-right:8px;
+color:var(--green);
+}
+
+/* MAP BUTTON */
+.map-btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 18px;
+border-radius:30px;
+text-decoration:none;
+font-size:.85rem;
+background:var(--green);
+color:#000;
+font-weight:600;
+transition:.3s;
+}
+
+.map-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(173,209,54,.35);
+}
+/* FOOTER COLUMN ALIGNMENT */
+.footer-col{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+/* PARAGRAPH SPACING */
+.footer-col p{
+margin:0;
+}
+
+/* EXTRA SPACE CLASS */
+.mt{
+margin-top:10px;
+}
+
+/* SOCIAL TITLE */
+.social-title{
+margin-top:18px;
+}
+
+/* IMPROVE GRID ALIGNMENT */
+.footer-grid{
+align-items:start;
+}
+
 </style>
 </head>
+
 <body>
-<div class="top-bar">
-  <div class="top-left">
-    <span>📞 +254 728 608 401</span>
-    <span>✉ info@cbs-l.com</span>
-    <span>🌍 Exporting Worldwide</span>
-  </div>
 
-  <div class="top-social">
-    <a href="https://www.facebook.com/profile.php?id=61586586574551" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://linkein.com/company/yourpage" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    <a href="https://tiktk.com/@yourpage" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="https://twitser.com/yourpage" target="_blank"><i class="fab fa-x-twitter"></i></a>
-  </div>
-</div>
-
+<!-- NAVBAR -->
 <nav class="navbar">
-<a class="nav-brand" href="#">
-  <img src="png_cbsl_logo_-removebg-preview.png" alt="CBS Logistics Logo">
-
-  <div>
-    <span class="company-name">CBS Logistics Limited</span>
-  </div>
-</a>
-<div class="menu-toggle" onclick="navLinks.classList.toggle('show')"><i class="fas fa-bars"></i></div>
-<div class="nav-links" id="navLinks">
-<a class="nav-link" href="#about">About</a>
-<a class="nav-link" href="#services">Services</a>
-<a class="nav-link" href="#crops">Crops</a>
-<a class="nav-link" href="#tea">Tea Export</a>
-<a class="nav-link" href="#contact">Contact</a>
-  <a class="nav-link" href="#business">Business Units</a> <!-- NEW -->
+<div class="brand">
+<img src="png_cbsl_logo_-removebg-preview.png">
+<div>
+<h3>CBS Logistics Limited</h3>
+<small>Grown with Love. Delivered with Care.</small>
 </div>
+</div>
+
+<div class="nav-links" id="navMenu">
+  <a href="homecbs.html" class="active">Home</a>
+  <a href="aboutcbs.html">About</a>
+  <a href="teaexport.html">Tea Export</a>
+  <a href="servicescbs.html">Services</a>
+  <a href="CROPS.html">Crops</a>
+</div>
+
+<!-- HAMBURGER -->
+<div class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
 </nav>
 
-<section class="hero">
-<div class="hero-slide active"><img src="https://images.pexels.com/photos/264537/pexels-photo-264537.jpeg"></div>
-<div class="hero-slide"><img src="https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg"></div>
-  <div class="hero-slide"><img src="https://images.pexels.com/photos/2889442/pexels-photo-2889442.jpeg"></div>
-   <div class="hero-slide"><img src="https://images.pexels.com/photos/2889442/pexels-photo-2889442.jpeg"></div>
-<div class="hero-slide"><video autoplay muted loop><source src="https://cdn.pixabay.com/video/2020/08/03/46541-451078731_large.mp4"></video></div>
-<div class="hero-content">
-<h1>Optimising Agricultural Value Chains</h1>
-<p>Cold Chain • Processing • Packaging • Export</p>
-</div>
-</section>
+<!-- FLOATING WHATSAPP -->
+<a class="float" href="https://wa.me/254728608401">
+<i class="fab fa-whatsapp"></i>
+</a>
 
-<section id="about">
-<h2>About CBS Logistics Limited</h2>
-<div class="about-wrapper">
-<div class="about-slider">
-<div class="about-slide active"><img src="https://images.pexels.com/photos/2889442/pexels-photo-2889442.jpeg"></div>
-<div class="about-slide"><img src="https://images.pexels.com/photos/2382894/pexels-photo-2382894.jpeg"></div>
-<div class="about-slide"><img src="https://images.pexels.com/photos/4198023/pexels-photo-4198023.jpeg"></div>
-</div>
+<!-- HERO WITH 5 IMAGE ANIMATION -->
+<section class="hero" id="home">
 
-<div>
-<p>CBS Logistics Limited was established in 2019 as a logistics company catering to the needs of growers who needed their produce to get to the markets in good time and in the right condition offering cold chain refrigeration solutions.
-We have since then opened different arms as we are committed to optimizing the fresh produce industry and other agricultural value chains to create wealth for our growers.
-We bring our expertise in production, processing and value addition and logistics easing the players processes in the fields.
-.</p>
-<p>Our Farm to Fork models are curated to support our growers with technical support and automating their farms to produce quality produce,reduce the post-harvest losses by having the best state of the art cold chain storage facilities and processing units to process the produce.
-Our experts in agronomy,engineering ,biotechnology,environmental experts work together to ensure that farmers are well supported to maximise their production and maintain the environment.
-</p>
-<p>We are keen on sustainable farming and our reforestation team is always supplying our growers with indigenous trees to plant in our farms to maintain a low carbon footprint in our ecosystem.</p>
-</div>
-</div>
-<div class="grid">
-<div class="icon-card"><i class="fas fa-bullseye"></i><h3>Mission</h3><p>At CBS Logistics we aim to intertwin all our teams of experts from our different arms ensuring production maintains good agricultural practices that are safe and up to par with the Global markets as we export our produce all over the world. Our state-of-the-art packhouses are ISO.. approved ,HACCP ensuring we have minimal post harvest losses etc (will clarify on this). Our Logistics and forwarding teams ensure that our clients receive their consignments in good time and in the right conditions..</p></div>
-<div class="icon-card"><i class="fas fa-eye"></i><h3>Vision</h3><p>Our vision is to ensure African growers both small and large scale growers are maximising the use of their land and increase the social economic impact of growers one farm at a time..</p></div>
-<div class="icon-card"><i class="fas fa-leaf"></i><h3>Sustainability</h3><p>Responsible farming & environmental conservation.</p></div>
-</div>
-</section>
-<section id="gallery">
-<h2>Our Operations</h2>
-<p>From farm production to global exports — visual proof of our integrated model.</p>
+  <section class="hero" id="home">
 
-<div class="gallery-wrapper">
+  <div class="hero-slides">
+    <img src="https://images.pexels.com/photos/4481326/pexels-photo-4481326.jpeg">
+    <img src="https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg">
+    <img src="https://images.pexels.com/photos/5231137/pexels-photo-5231137.jpeg">
+    <img src="https://images.pexels.com/photos/4481324/pexels-photo-4481324.jpeg">
+    <img src="https://images.pexels.com/photos/708798/pexels-photo-708798.jpeg">
+  </div>
 
-  <div class="gallery-track">
-
-    <div class="gallery-item">
-      <img loading="lazy" src="chives.jpeg">
-      <img loading="lazy" src="chives2.jpeg">
-      <span>Farm Production</span>
-    </div>
-
-    <div class="gallery-item">
-      <img loading="lazy" src="https://i.pinimg.com/736x/43/b6/c4/43b6c4b7687230b885c5ebbc154456cc.jpg">
-      <img loading="lazy" src="https://i.pinimg.com/736x/de/59/25/de59257ca6bc39c5e6a4cd2b2462911a.jpg">
-      <span>Harvesting</span>
-    </div>
-
-    <div class="gallery-item">
-      <img loading="lazy" src="https://i.pinimg.com/474x/27/91/70/279170b1d4d7959f63cdad9ab0191fa2.jpg">
-      <img loading="lazy" src="https://i.pinimg.com/736x/54/b5/f7/54b5f7f7d940af098aeb7b2a2f984c7f.jpg">
-      <span>Cold Storage Facilities</span>
-    </div>
-
-    <div class="gallery-item">
-      <img loading="lazy" src="https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg">
-      <img loading="lazy" src="https://i.pinimg.com/1200x/8d/15/e6/8d15e66f75eee26cda00ffe3562a5b94.jpg">
-      <span>Processing & Packing</span>
-    </div>
-
-    <div class="gallery-item">
-      <img loading="lazy" src="https://i.pinimg.com/1200x/7e/36/5f/7e365fb0adbd4f1e0981bb6ba5bc7f2b.jpg">
-      <img loading="lazy" src="https://i.pinimg.com/1200x/76/0c/06/760c06e872599bd52a0b28ef3b06b011.jpg">
-      <span>Refrigerated Transport</span>
-    </div>
+  <div class="hero-content">
+    <br>
+    <br>
+    <h1>Connecting African Farmers to the World</h1>
+    <br>
+    <br>
+    <p>Cold Chain • Processing • Packaging • Export</p>
+    <br>
+    <br>
+ <a class="btn"
+href="https://wa.me/254728608401?text=Hello%20CBS%20Logistics.%20I%20would%20like%20to%20start%20an%20export%20shipment%20process."
+target="_blank">
+Get Started
+</a>
 
   </div>
 
-  <button class="gallery-btn left">&#10094;</button>
-  <button class="gallery-btn right">&#10095;</button>
-
-</div>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-  <span class="close">&times;</span>
-  <img id="lightboxImg">
-</div>
 </section>
 
-<section id="services">
-<h2>Our Services</h2>
-<div class="grid">
-<div class="image-card"><img src="https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg"><div><i class="fas fa-snowflake service-icon"></i><h4>Cold Chain Logistics</h4><div class="service-more">Temperature-controlled storage and transport.</div><button class="btn" onclick="toggleService(this)">Read more</button></div></div>
-<div class="image-card"><img src="https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg"><div><i class="fas fa-industry service-icon"></i><h4>Processing & Packaging</h4><div class="service-more">Cleaning, grading and export packaging.</div><button class="btn" onclick="toggleService(this)">Read more</button></div></div>
-<div class="image-card"><img src="https://images.pexels.com/photos/2382894/pexels-photo-2382894.jpeg"><div><i class="fas fa-seedling service-icon"></i><h4>Farmer Support</h4><div class="service-more">Training and agronomy support.</div><button class="btn" onclick="toggleService(this)">Read more</button></div></div>
-<div class="image-card"><img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"><div><i class="fas fa-file-export service-icon"></i><h4>Export Documentation</h4><div class="service-more">Compliance & trade paperwork.</div><button class="btn" onclick="toggleService(this)">Read more</button></div></div>
-<div class="image-card"><img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg"><div><i class="fas fa-globe service-icon"></i><h4>Market Access</h4><div class="service-more">Connecting growers to buyers.</div><button class="btn" onclick="toggleService(this)">Read more</button></div></div>
-<div class="image-card"><img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"><div><i class="fas fa-recycle service-icon"></i><h4>Sustainability Programs</h4><div class="service-more">Climate-smart initiatives.</div><button class="btn" onclick="toggleService(this)">Read more</button></div></div>
-</div>
-</section>
-<!-- ===== BUSINESS SECTIONS START ===== -->
 
-<section id="business">
-<h2>Our Business Divisions</h2>
-<div class="grid">
-<div class="icon-card">
-<i class="fas fa-warehouse"></i>
-<h3>Cold Chain Infrastructure</h3>
-<p>Temperature-controlled storage and refrigerated transport to preserve freshness and quality.</p>
-</div>
-<div class="icon-card">
-<i class="fas fa-industry"></i>
-<h3>Processing & Value Addition</h3>
-<p>Cleaning, grading, drying, packing and preparation for local and export markets.</p>
-</div>
-<div class="icon-card">
-<i class="fas fa-ship"></i>
-<h3>Export & Trade Logistics</h3>
-<p>End-to-end export handling including documentation, compliance and shipping.</p>
-</div>
-<div class="icon-card">
-<i class="fas fa-seedling"></i>
-<h3>Grower Support Programs</h3>
-<p>Training, aggregation models, quality standards and guaranteed market access.</p>
-</div>
-</div>
+  
+
 </section>
 
-<section id="model">
-<h2>How We Do Business</h2>
-<p>
-CBS Logistics operates an integrated <strong>Farm-to-Fork business model</strong>, ensuring efficiency,
-traceability and value maximization across the entire agricultural supply chain.
+
+
+<section class="alt" id="certifications">
+
+<h2 style="text-align:center;color:var(--teal)">
+Certifications & Compliance
+</h2>
+
+<p style="text-align:center;max-width:900px;margin:10px auto 25px">
+Our operations align with international food safety, traceability and export regulatory standards.
 </p>
-<div class="grid">
-<div class="icon-card"><i class="fas fa-tractor"></i><h3>Production</h3><p>Working directly with farmers to ensure quality and consistency.</p></div>
-<div class="icon-card"><i class="fas fa-box"></i><h3>Aggregation</h3><p>Centralized collection, grading and cold storage.</p></div>
-<div class="icon-card"><i class="fas fa-cogs"></i><h3>Processing</h3><p>Value addition aligned to buyer specifications.</p></div>
-<div class="icon-card"><i class="fas fa-globe"></i><h3>Global Markets</h3><p>Export logistics and international buyer connections.</p></div>
+
+<div class="cert-row">
+
+<!-- GLOBAL GAP -->
+<div class="cert">
+ 
+  <p>Global GAP Aligned</p>
+
+  <span class="audit">Audit: 2024</span>
+
+  <div class="more-btn" onclick="toggleCert(this)">
+    Understand More ▾
+  </div>
+
+  <div class="cert-desc">
+    Global GAP ensures:
+    • Safe pesticide use  
+    • Farm traceability  
+    • Worker welfare  
+    • Environmental protection  
+    • Field to carton records
+  </div>
+</div>
+
+<!-- ISO 22000 -->
+<div class="cert">
+  <p>ISO 22000 Food Safety</p>
+
+  <span class="audit">Audit: 2024</span>
+
+  <div class="more-btn" onclick="toggleCert(this)">
+    Understand More ▾
+  </div>
+
+  <div class="cert-desc">
+    ISO 22000 covers:
+    • Packhouse hygiene  
+    • Cold chain control  
+    • Allergen management  
+    • Cleaning schedules  
+    • Corrective actions
+  </div>
+</div>
+
+<!-- HACCP -->
+<div class="cert">
+  <p>HACCP System</p>
+
+  <span class="audit">Audit: 2024</span>
+
+  <div class="more-btn" onclick="toggleCert(this)">
+    Understand More ▾
+  </div>
+
+  <div class="cert-desc">
+    HACCP manages:
+    • Hazard analysis  
+    • CCP monitoring  
+    • Temperature logs  
+    • Contamination prevention
+  </div>
+</div>
+
+<!-- KEPHIS -->
+<div class="cert">
+  <p>KEPHIS Approved</p>
+
+  <span class="audit">Licensed: 2024</span>
+
+  <div class="more-btn" onclick="toggleCert(this)">
+    Understand More ▾
+  </div>
+
+  <div class="cert-desc">
+    KEPHIS approval allows:
+    • Phytosanitary certificates  
+    • Export inspection  
+    • Pest control compliance  
+    • Market entry approval
+  </div>
+</div>
+
+<!-- ETHICAL -->
+<div class="cert">
+  <p>Ethical Sourcing</p>
+
+  <span class="audit">Verified: 2024</span>
+
+  <div class="more-btn" onclick="toggleCert(this)">
+    Understand More ▾
+  </div>
+
+  <div class="cert-desc">
+    Ethical sourcing ensures:
+    • Fair wages  
+    • No child labor  
+    • Safe conditions  
+    • Community impact
+  </div>
+</div>
+
 </div>
 </section>
-
-<section id="why-us">
-<h2>Why Choose CBS Logistics</h2>
-<div class="grid">
-<div class="image-card"><div><i class="fas fa-check-circle service-icon"></i><h4>End-to-End Control</h4><p>We manage every step from farm to destination.</p></div></div>
-<div class="image-card"><div><i class="fas fa-snowflake service-icon"></i><h4>Cold Chain Expertise</h4><p>Reduced post-harvest losses and preserved quality.</p></div></div>
-<div class="image-card"><div><i class="fas fa-balance-scale service-icon"></i><h4>Compliance Ready</h4><p>Export standards, traceability and certifications.</p></div></div>
-<div class="image-card"><div><i class="fas fa-handshake service-icon"></i><h4>Trusted Partnerships</h4><p>Long-term relationships with growers and buyers.</p></div></div>
-</div>
-</section>
-
-<section id="partners">
-<h2>Who We Work With</h2>
-<div class="grid">
-<div class="icon-card"><i class="fas fa-users"></i><h3>Smallholder Farmers</h3><p>Organized into structured supply programs.</p></div>
-<div class="icon-card"><i class="fas fa-building"></i><h3>Processors</h3><p>Licensed and quality-certified processing partners.</p></div>
-<div class="icon-card"><i class="fas fa-store"></i><h3>Retail & Wholesalers</h3><p>Local and international buyers.</p></div>
-<div class="icon-card"><i class="fas fa-ship"></i><h3>Logistics Partners</h3><p>Air, sea and inland transport providers.</p></div>
-</div>
-</section>
-
-<section id="compliance">
-<h2>Quality & Compliance</h2>
-<p>
-CBS Logistics adheres to strict quality assurance, food safety and export compliance requirements
-to meet international market standards.
+<p style="text-align:center;max-width:900px;margin:10px auto 25px">
+Shipment Procedure.
 </p>
-<div class="grid">
-<div class="icon-card"><i class="fas fa-certificate"></i><h3>Quality Grading</h3><p>Standardized inspection and grading processes.</p></div>
-<div class="icon-card"><i class="fas fa-barcode"></i><h3>Traceability</h3><p>Batch tracking from farm to export.</p></div>
-<div class="icon-card"><i class="fas fa-file-alt"></i><h3>Documentation</h3><p>Export permits, certificates and customs paperwork.</p></div>
-</div>
-</section>
 
-<section id="sustainability">
-<h2>Sustainability & ESG</h2>
-<div class="grid">
-<div class="icon-card"><i class="fas fa-leaf"></i><h3>Environmental Protection</h3><p>Reduced waste, efficient energy use and reforestation.</p></div>
-<div class="icon-card"><i class="fas fa-hands-helping"></i><h3>Social Impact</h3><p>Fair farmer pricing and community development.</p></div>
-<div class="icon-card"><i class="fas fa-chart-line"></i><h3>Economic Growth</h3><p>Improved incomes through value addition.</p></div>
-</div>
-</section>
+<!-- ===== STEP 1 ===== -->
+<!-- ===== STEP 1 ===== -->
+<div class="proc-item">
 
-<section id="markets">
-<h2>Markets We Serve</h2>
-<div class="grid">
-<div class="icon-card"><i class="fas fa-map-marker-alt"></i><h3>Africa</h3><p>Regional and intra-African trade.</p></div>
-<div class="icon-card"><i class="fas fa-plane"></i><h3>Middle East</h3><p>Fresh produce and tea exports.</p></div>
-<div class="icon-card"><i class="fas fa-euro-sign"></i><h3>Europe</h3><p>Premium quality and specialty crops.</p></div>
-<div class="icon-card"><i class="fas fa-globe-asia"></i><h3>Asia</h3><p>Tea and specialty agricultural products.</p></div>
-</div>
-</section>
-
-<section id="cta">
-<h2>Do Business With Us</h2>
-<p>Looking to source, export, or partner with a trusted agricultural logistics company?</p>
-<div style="text-align:center">
-<a href="#contact" class="btn">Contact CBS Logistics</a>
-</div>
-</section>
-
-<!-- ===== BUSINESS SECTIONS END ===== -->
-
-<section id="crops">
-<h2>Crops We Export</h2>
-<h3>Fruits</h3>
-<div class="crop-grid">
-<div class="crop-item"><img src="https://i.pinimg.com/736x/eb/4b/5a/eb4b5a7c9480884eddf9ee9460aa4392.jpg"><h4>Avocados</h4></div>
-<div class="crop-item"><img src="https://i.pinimg.com/736x/0a/13/52/0a135298f59dc74dee68471441dee758.jpg"><h4>Mangoes</h4></div>
-<div class="crop-item"><img src="https://i.pinimg.com/736x/41/fb/27/41fb275d1eb30c41fc680917cb78d297.jpg"><h4>Pineapples</h4></div>
-<div class="crop-item"><img src="https://i.pinimg.com/736x/d1/bd/1f/d1bd1fbd29e26ae20a045c38e650feb6.jpg"><h4>Passion Fruits</h4></div>
+<div class="proc-head" onclick="openStep(1)">
+1. Farm Booking
 </div>
 
-<h3>Vegetables</h3>
-<div class="crop-grid">
-<div class="crop-item"><img src="https://i.pinimg.com/1200x/96/d3/15/96d3151f0f3135c774b44bf762e5a81e.jpg"><h4>Okra</h4></div>
-<div class="crop-item"><img src="https://i.pinimg.com/736x/e9/7b/ba/e97bba6895480cc46a2607af6334f1e3.jpg"><h4>Broccoli</h4></div>
-<div class="crop-item"><img src="https://i.pinimg.com/1200x/2c/12/c5/2c12c5dea3a590c7b1803691da318198.jpg"><h4>Spinach</h4></div>
-<div class="crop-item"><img src="https://i.pinimg.com/736x/eb/1e/64/eb1e642e8dbfea4c51b7f631dfefbce9.jpg"><h4>Cabbage</h4></div>
+<div class="slider">
+  <div class="slides">
+    <img src="harvestuse.jpeg">
+    <img src="sam @isac.jpeg">
+    <img src="green.jpeg">
+    <img src="harvest use2.jpeg">
+  </div>
+
+
+
+  <div class="dots"></div>
 </div>
 
-<h3>Herbs</h3>
-<div class="crop-grid">
-<div class="crop-item"><img src="https://i.pinimg.com/1200x/7f/eb/8d/7feb8d8df2cdd303526ab0cd245245ec.jpg"><h4>Rosemary</h4></div>
-<div class="crop-item"><img src="https://i.pinimg.com/736x/93/d9/1a/93d91a5a8f7a3a8eb0638ebd418020ac.jpg"><h4>Basil</h4></div>
-<div class="crop-item"><img src="https://i.pinimg.com/736x/6b/1e/be/6b1ebe3c8edfa484e2137717e33b229e.jpg"><h4>Mint</h4></div>
-<div class="crop-item"><img src="https://i.pinimg.com/1200x/2a/96/4e/2a964e95f389de8469f2effc78054c97.jpg"><h4>Coriander</h4></div>
-</div>
+<p>Client booking → crop allocation → schedule confirmation</p>
 
-<h3>Speciality Crops</h3>
-<div class="crop-grid">
-<div class="crop-item"><img src="https://i.pinimg.com/1200x/b1/1e/01/b11e0152849fbf8f857740221b44f54a.jpg"><h4>Macadamia</h4></div>
-<div class="crop-item"><img src="https://i.pinimg.com/736x/b1/c0/0f/b1c00f2b80f66472106b6e28d3322b34.jpg"><h4>Chia Seeds</h4></div>
-<div class="crop-item"><img src="https://i.pinimg.com/1200x/e6/b5/a1/e6b5a165009edde43d0a1487ffaf8116.jpg"><h4>Mushrooms</h4></div>
-<div class="crop-item"><img src="https://i.pinimg.com/1200x/45/57/d0/4557d037dfb0fe87323c444346659b1c.jpg"><h4>Exotic Herbs</h4></div>
-</div>
-</section>
+<div class="badge">Docs Needed</div>
 
-<section id="tea">
-<h2>Tea Export</h2>
-<p>CBS Logistics Limited provides end-to-end tea export solutions, connecting Kenyan tea producers to global markets with efficiency, compliance, and quality assurance at the core. We handle the sourcing, grading, packaging, documentation, and international logistics of premium Kenyan teas, ensuring strict adherence to destination market standards. Our export operations are designed to guarantee product traceability, consistent quality, and timely delivery under FOB and CIF terms, enabling our partners to access reliable, transparent, and sustainable tea supply chains worldwide</p>
+<ul class="check">
+<li>Booking form</li>
+<li>Farm details</li>
+</ul>
 
-<div class="process-box">
-<div class="process-steps">
-<div class="progress" id="progress"></div>
-<div class="step active" data-i="0"><i class="fas fa-leaf"></i></div>
-<div class="step" data-i="1"><i class="fas fa-filter"></i></div>
-<div class="step" data-i="2"><i class="fas fa-box-open"></i></div>
-<div class="step" data-i="3"><i class="fas fa-barcode"></i></div>
-<div class="step" data-i="4"><i class="fas fa-ship"></i></div>
-</div>
-<div id="processText"></div>
-</div>
+<button class="btn" onclick="showForm(1)">Send Request</button>
 
-<h3>Tea Grades & Export Specifications</h3>
-<div class="table-wrap">
-<table>
-<thead><tr><th>Tea Type</th><th>Grades</th><th>Profile</th><th>Packaging</th><th>Markets</th></tr></thead>
-<tbody>
-<tr><td>Black CTC</td><td>D1, PF1</td><td>Strong & brisk</td><td>Paper sacks</td><td>Africa, Middle East</td></tr>
-<tr><td>Orthodox</td><td>BP1, OP</td><td>Full-bodied</td><td>Cartons</td><td>EU, Asia</td></tr>
-<tr><td>Purple Tea</td><td>Premium</td><td>Antioxidant-rich</td><td>Vacuum packs</td><td>Global</td></tr>
-<tr><td>Green Tea</td><td>Whole leaf</td><td>Delicate</td><td>Retail packs</td><td>Asia, EU</td></tr>
-</tbody>
+<div id="form1" style="display:none">
+<form onsubmit="return sendSilent(this)">
+<table class="req-table">
+
+<tr><td>Name</td><td><input name="entry.312796761" required></td></tr>
+<tr><td>Phone</td><td><input name="entry.27268637" required></td></tr>
+<tr><td>Email</td><td><input name="entry.2069509345"></td></tr>
+<tr><td>Message</td><td><textarea name="entry.1196604163"></textarea></td></tr>
+
 </table>
-</div>
 
-<h3>Tea Export Inquiry</h3>
-<form action="mailto:info@cbs-l.com" method="POST" enctype="text/plain">
-<input type="hidden" name="_subject" value="New Tea Export Inquiry – CBS Logistics">
-<input type="text" name="company" placeholder="Company Name" required style="width:100%;padding:14px;margin-bottom:12px">
-<input type="email" name="email" placeholder="Business Email" required style="width:100%;padding:14px;margin-bottom:12px">
-<textarea name="message" rows="5" placeholder="Tea type, grade, quantity, destination" style="width:100%;padding:14px"></textarea>
-<button class="btn" type="submit">Submit Inquiry</button>
+<button class="btn">Submit</button>
 </form>
-</section>
 </div>
-<section id="contact">
-<h2>Contact Us</h2>
-<p>Email: info@cbs-l.com | Phone: +254 728 608 401 | Nairobi, Kenya</p>
-<iframe src="https://www.google.com/maps?q=Nairobi%20Kenya&output=embed" width="100%" height="350" style="border:0;border-radius:14px"></iframe>
-</section>
-<footer class="footer">
-  <div class="footer-grid">
 
-    <!-- COMPANY INFO -->
-    <div>
-      <div class="footer-logo">
-        <img src="png_cbsl_logo_-removebg-preview.png" alt="CBS Logistics Logo">
-      </div>
-      <p style="margin-top:15px;">
-        <strong>CBS Logistics Limited</strong><br>
-        Grown With Love, Delivered With Care
-      </p>
-      <p>
-        Integrated cold chain logistics, agricultural value addition
-        and global export solutions.
-      </p>
-    </div>
+</div>
 
-    <!-- QUICK LINKS -->
-    <div>
-      <h4>Quick Links</h4>
-      <a href="#about">About Us</a>
-      <a href="#services">Our Services</a>
-      <a href="#business">Business Units</a>
-      <a href="#crops">Crops</a>
-      <a href="#tea">Tea Export</a>
-      <a href="#contact">Contact Us</a>
-    </div>
 
-    <!-- CONTACT INFO -->
-    <div>
-      <h4>Contact Information</h4>
-      <p>📍 Lenana Road, Lenana Court<br>Kilimani, Nairobi</p>
-      <p>📞 +254 728 608 401</p>
-      <p>✉ info@cbs-l.com</p>
-    </div>
 
-    <!-- OPERATIONS -->
-    <div>
-      <h4>Our Operations</h4>
-      <p><strong>Head Office</strong><br>Nairobi, Kenya</p>
-      <p><strong>Farms</strong><br>
-        Mwea – Karaba<br>
-        Embu<br>
-        Timau – Laikipia<br>
-        Kajiado<br>
-        Murang’a
-      </p>
-    </div>
 
+<!-- ===== STEP 2 ===== -->
+<div class="proc-item">
+
+<div class="proc-head" onclick="openStep(2)">
+2. Harvest & Cooling
+
+</div>
+
+<div class="slider">
+
+  <div class="slides">
+    <img src="harvest.jpeg">
+    <img src="https://i.pinimg.com/736x/91/12/73/91127311f20ffe00962ef905da3a78ff.jpg">
+    <img src="https://i.pinimg.com/736x/70/4a/28/704a287f23760497bdfb11e343e26dca.jpg">
+    <img src="https://i.pinimg.com/1200x/d9/4c/e4/d94ce40a88b75cd3ab8c9930e08a56a3.jpg">
   </div>
 
-  <!-- SOCIAL -->
-  <div style="text-align:center;margin-top:40px;">
-    <h4>Follow Us</h4>
+  <button class="prev" onclick="moveSlide(this,-1)">❮</button>
+  <button class="next" onclick="moveSlide(this,1)">❯</button>
+
+  <div class="dots"></div>
+
+<p>Picking → cooling → temp logs</p>
+
+<div class="badge">Docs Needed</div>
+<ul class="check">
+<li>Temp log</li>
+<li>Harvest report</li>
+</ul>
+
+<button class="btn" onclick="showForm(2)">Send Request</button>
+
+<div id="form2" style="display:none">
+<form onsubmit="return sendSilent(this)">
+<table class="req-table">
+
+<tr><td>Name</td><td><input name="entry.312796761" required></td></tr>
+<tr><td>Phone</td><td><input name="entry.27268637" required></td></tr>
+<tr><td>Email</td><td><input name="entry.2069509345"></td></tr>
+<tr><td>Message</td><td><textarea name="entry.1196604163"></textarea></td></tr>
+
+</table>
+
+<button class="btn">Submit</button>
+</form>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- ===== STEP 3 ===== -->
+<div class="proc-item">
+
+<div class="proc-head" onclick="openStep(3)">
+3. Packing
+
+</div>
+
+<div class="slider">
+
+  <div class="slides">
+    <img src="pack4.jpeg">
+    <img src="pack3.jpeg">
+    <img src="pack2.jpeg">
+      <img src="pack1.jpeg">
+  </div>
+
+  <button class="prev" onclick="moveSlide(this,-1)">❮</button>
+  <button class="next" onclick="moveSlide(this,1)">❯</button>
+
+  <div class="dots"></div>
+
+<p>Grading → labeling → carton sealing</p>
+
+<div class="badge">Docs Needed</div>
+<ul class="check">
+<li>Packing list</li>
+<li>Quality sheet</li>
+</ul>
+
+<button class="btn" onclick="showForm(3)">Send Request</button>
+
+<div id="form3" style="display:none">
+<form onsubmit="return sendSilent(this)">
+<table class="req-table">
+
+<tr><td>Name</td><td><input name="entry.312796761" required></td></tr>
+<tr><td>Phone</td><td><input name="entry.27268637" required></td></tr>
+<tr><td>Email</td><td><input name="entry.2069509345"></td></tr>
+<tr><td>Message</td><td><textarea name="entry.1196604163"></textarea></td></tr>
+
+</table>
+
+<button class="btn">Submit</button>
+</form>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- ===== STEP 4 ===== -->
+<div class="proc-item">
+
+<div class="proc-head" onclick="openStep(4)">
+4. Documentation
+
+</div>
+
+<div class="slider">
+
+  <div class="slides">
+<img src="https://i.pinimg.com/736x/5a/2e/18/5a2e18f51782abf326cdda4fd27394fd.jpg">
+<img src="https://i.pinimg.com/736x/24/aa/65/24aa656be2ab7de72627e49b6869b716.jpg">
+<img src="https://i.pinimg.com/736x/65/69/d0/6569d032dc7ed0b591d0e0beddb1609d.jpg">
+<img src="https://i.pinimg.com/736x/4d/8a/49/4d8a4958711e922b71b9716c9eb22b8a.jpg">
+</div>
+  <button class="prev" onclick="moveSlide(this,-1)">❮</button>
+  <button class="next" onclick="moveSlide(this,1)">❯</button>
+
+  <div class="dots"></div>
+
+<p>Phyto → invoice → CO → permits</p>
+
+<div class="badge">Docs Needed</div>
+<ul class="check">
+<li>Invoice</li>
+<li>Phyto certificate</li>
+</ul>
+
+<button class="btn" onclick="showForm(4)">Send Request</button>
+
+<div id="form4" style="display:none">
+<form onsubmit="return sendSilent(this)">
+<table class="req-table">
+
+<tr><td>Name</td><td><input name="entry.312796761" required></td></tr>
+<tr><td>Phone</td><td><input name="entry.27268637" required></td></tr>
+<tr><td>Email</td><td><input name="entry.2069509345"></td></tr>
+<tr><td>Message</td><td><textarea name="entry.1196604163"></textarea></td></tr>
+
+</table>
+
+<button class="btn">Submit</button>
+</form>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- ===== STEP 5 ===== -->
+<div class="proc-item">
+
+<div class="proc-head" onclick="openStep(5)">
+5. Airport Handling
+
+</div>
+
+<div class="slider">
+
+  <div class="slides">
+<img src="https://i.pinimg.com/736x/23/89/b5/2389b55503365d1e820bb382c1506157.jpg">
+<img src="https://i.pinimg.com/736x/89/b2/31/89b231474878ac77fa17836abf15833a.jpg">
+<img src="https://i.pinimg.com/1200x/02/a7/3f/02a73f0def2b2d117becdf7c7b75bc78.jpg">
+<img src="https://i.pinimg.com/736x/98/53/be/9853beef7263b2617c8b713f39d87834.jpg">
+</div>
+
+ <button class="prev" onclick="moveSlide(this,-1)">❮</button>
+  <button class="next" onclick="moveSlide(this,1)">❯</button>
+
+  <div class="dots"></div>
+
+<p>Scanning → palletizing → cold storage</p>
+
+<div class="badge">Docs Needed</div>
+<ul class="check">
+<li>Airway bill</li>
+<li>Handling sheet</li>
+</ul>
+
+<button class="btn" onclick="showForm(5)">Send Request</button>
+
+<div id="form5" style="display:none">
+<form onsubmit="return sendSilent(this)">
+<table class="req-table">
+
+<tr><td>Name</td><td><input name="entry.312796761" required></td></tr>
+<tr><td>Phone</td><td><input name="entry.27268637" required></td></tr>
+<tr><td>Email</td><td><input name="entry.2069509345"></td></tr>
+<tr><td>Message</td><td><textarea name="entry.1196604163"></textarea></td></tr>
+
+</table>
+
+<button class="btn">Submit</button>
+</form>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- ===== STEP 6 ===== -->
+<div class="proc-item">
+
+<div class="proc-head" onclick="openStep(6)">
+6. Flight & Delivery
+
+</div>
+
+<div class="slider">
+
+  <div class="slides">
+<img src="https://i.pinimg.com/736x/e9/02/9e/e9029efc5d640c0e52b4fbe78ef6afb0.jpg">
+<img src="https://i.pinimg.com/1200x/70/88/d3/7088d3b8fa93c75b11bd55431f6f2a67.jpg">
+<img src="https://i.pinimg.com/1200x/40/fb/89/40fb89d4043e95a34b82e653e2080e6f.jpg">
+<img src="https://i.pinimg.com/736x/dc/59/32/dc59326ca9b4604dc5ef3ef4fc93dd0a.jpg">
+</div>
+
+ <button class="prev" onclick="moveSlide(this,-1)">❮</button>
+  <button class="next" onclick="moveSlide(this,1)">❯</button>
+
+  <div class="dots"></div>
+
+<p>Export → tracking → final delivery</p>
+
+<div class="badge">Docs Needed</div>
+<ul class="check">
+<li>POD</li>
+<li>Tracking report</li>
+</ul>
+
+<button class="btn" onclick="showForm(6)">Send Request</button>
+
+<div id="form6" style="display:none">
+<form onsubmit="return sendSilent(this)">
+<table class="req-table">
+
+<tr><td>Name</td><td><input name="entry.312796761" required></td></tr>
+<tr><td>Phone</td><td><input name="entry.27268637" required></td></tr>
+<tr><td>Email</td><td><input name="entry.2069509345"></td></tr>
+<tr><td>Message</td><td><textarea name="entry.1196604163"></textarea></td></tr>
+
+</table>
+
+<button class="btn">Submit</button>
+</form>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+</section>
+<!-- DOCUMENTS REQUIRED FOR EXPORT -->
+<section id="docs">
+<h2 style="text-align:center;color:var(--teal)">Documents Required for Export</h2>
+
+<div class="grid-3">
+
+<div class="card">
+<h4>Statutory Documents</h4>
+<ol class="check">
+<p> • KEPHIS Phytosanitary Certificate</p>
+<P> • Certificate of Origin<p>
+<p> • Export Permit</p>
+<p> • Customs Entry (C17)<p>
+</ol>
+</div>
+
+<div class="card">
+<h4>Commercial Documents</h4>
+<ul class="check">
+<p> • Commercial Invoice</p>
+<p> • Packing List</p>
+<p> • Airway Bill / Bill of Lading</p>
+<p> • Sales Contract<p>
+</ul>
+</div>
+
+<div class="card">
+<h4>Quality Documents</h4>
+<ul class="check">
+<p> • Quality Inspection Report</p>
+<p> • Temperature Logs</p>
+<p> • Traceability Codes</p>
+<p> • Buyer Specifications</p>
+</ul>
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:20px">
+<a class="btn" href="https://wa.me/254728608401?text=Help%20with%20export%20documents">
+Get Help With Documents
+</a>
+</div>
+
+</section>
+<div id="toast"
+style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:#0e5c4f;
+color:white;
+padding:14px 20px;
+border-radius:10px;
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+display:none;
+z-index:9999;
+font-weight:600;
+">
+<i class="fa fa-check-circle"></i>
+ Received! We’ll get back to you shortly.
+</div>
+
+<footer class="footer">
+
+<div class="footer-grid">
+
+  <!-- ABOUT -->
+  <div class="footer-col">
+    <div class="footer-logo">
+      <img src="png_cbsl_logo_-removebg-preview.png">
+    </div>
+
+    <p>
+    CBS Logistics Limited is a Kenyan fresh produce export and cold chain company
+    providing end-to-end handling from farm booking, harvesting, cooling,
+    packing, documentation to final delivery in global markets.
+    </p>
+
+    <p class="mt">
+    We focus on traceability, temperature control and compliance with
+    Global GAP, HACCP, ISO 22000 and KEPHIS export standards.
+    </p>
+  </div>
+
+  <!-- LINKS -->
+  <div class="footer-col">
+    <h4>Important Links</h4>
+
+    <a href="index.html">Home</a>
+    <a href="aboutcbs.html">About</a>
+    <a href="teaexport.html">Tea Export</a>
+    <a href="servicescbs.html">Services</a>
+    <a href="CROPS.html">Crops</a>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="footer-col">
+
+    <div class="office-card">
+      <h4>Head Office – Nairobi</h4>
+
+      <p><i class="fa fa-building"></i> CBS Logistics Limited</p>
+      <p><i class="fa fa-map-marker"></i> Lenana Rd  Lenana Court,<br> Nairobi, Kenya.</p>
+      <p><i class="fa fa-clock"></i> Mon – Fri: 8:00 AM – 5:00 PM</p>
+      <p><i class="fa fa-envelope"></i> info@cbs-l.com</p>
+      <p><i class="fa fa-phone"></i> +254 728 608 401</p>
+
+      <a href="https://www.google.com/maps/search/?api=1&query=Nairobi+Kenya" 
+         target="_blank" class="map-btn">
+         View Office on Map
+      </a>
+    </div>
+
+    <h4 class="social-title">Follow Us</h4>
+
     <div class="footer-social">
-      <a href="https://www.facebook.com/profile.php?id=61586586574551" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61586586574551">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://linkedin.com/company/yourpage">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
       <a href="#"><i class="fab fa-tiktok"></i></a>
       <a href="#"><i class="fab fa-x-twitter"></i></a>
     </div>
+
   </div>
-  <!-- COPYRIGHT -->
-  <div class="footer-bottom">
-    © 2025 CBS Logistics Limited. All Rights Reserved.
-  </div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 CBS Logistics Limited – Grown with Love. Delivered with Care.
+</div>
+
 </footer>
-<!-- VOICE AUDIO -->
-<audio id="voicePrompt">
-  <source src="cbs .mp4" type="audio/mpeg">
-</audio>
-<script>
-const navLinks=document.getElementById('navLinks');
-const slides=document.querySelectorAll('.hero-slide');
-let i=0;
-setInterval(()=>{slides[i].classList.remove('active');i=(i+1)%slides.length;slides[i].classList.add('active')},5000);
 
-function toggleService(btn){
-btn.closest('.image-card').classList.toggle('active');
+
+
+<script>
+function openStep(n){
+  const body = document.getElementById("step"+n);
+
+  if(body.style.maxHeight){
+      body.style.maxHeight = null;
+  }else{
+      body.style.maxHeight = body.scrollHeight + "px";
+  }
 }
 
-const steps=document.querySelectorAll('.step');
-const progress=document.getElementById('progress');
-const text=document.getElementById('processText');
-const data=[
-{t:"Raw Tea Intake",d:"Tea received and sampled."},
-{t:"Cleaning & Grading",d:"Quality grading and sorting."},
-{t:"Packaging",d:"Export-grade packaging."},
-{t:"Labelling",d:"Compliance labelling."},
-{t:"Export Dispatch",d:"Shipped under FOB/CIF."}
-];
-let c=0;
-function update(){
-steps.forEach((s,i)=>{s.classList.remove('active','done');if(i<c)s.classList.add('done');if(i===c)s.classList.add('active')});
-text.innerHTML=`<h3>${data[c].t}</h3><p>${data[c].d}</p>`;
-progress.style.width=(c/(steps.length-1))*100+"%";
+function showForm(n){
+  const f = document.getElementById("form"+n);
+
+  if(f.style.display === "block"){
+      f.style.display = "none";
+  }else{
+      f.style.display = "block";
+  }
+
+  // make sure parent expands
+  const parent = document.getElementById("step"+n);
+  parent.style.maxHeight = parent.scrollHeight + 300 + "px";
 }
-steps.forEach(s=>s.onclick=()=>{c=parseInt(s.dataset.i);update()});
-setInterval(()=>{c=(c+1)%steps.length;update()},6000);
-update();
 
-</script>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 900,
-    once: true
-  });
 
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    const audio = document.getElementById("voicePrompt");
-    audio.volume = 0.6;
-    audio.play().catch(()=>{});
-  }, 7000);
+function showToast(){
+const t = document.getElementById("toast");
+t.style.display = "block";
+
+setTimeout(()=>{
+t.style.display = "none";
+}, 3000);
+}
+
+function sendSilent(form){
+
+const data = new FormData();
+
+data.append("entry.312796761", form.querySelector('[name="entry.312796761"]').value);
+data.append("entry.27268637", form.querySelector('[name="entry.27268637"]').value);
+data.append("entry.2069509345", form.querySelector('[name="entry.2069509345"]').value);
+data.append("entry.1196604163", form.querySelector('[name="entry.1196604163"]').value);
+
+fetch("https://docs.google.com/forms/d/e/1FAIpQLSdTztqWi99ZBHPzF-q5BmmUk1BfiIrun9kb4Ji5q2ubY4OUYA/formResponse",{
+method:"POST",
+mode:"no-cors",
+body:data
+})
+.then(()=>{
+
+// clear form fields
+form.reset();
+
+// show nice popup
+showToast();
+
 });
 
-/* Auto-close mobile nav when a link is clicked */
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('show');
+return false;
+}
+document.querySelectorAll('.slider').forEach(initSlider);
+
+function initSlider(slider){
+
+  const slides = slider.querySelector('.slides');
+  const imgs = slides.querySelectorAll('img');
+  const dotsBox = slider.querySelector('.dots');
+
+  let index = 0;
+
+  // create dots
+  imgs.forEach((_,i)=>{
+    const d = document.createElement('span');
+    d.className='dot';
+    d.onclick=()=>go(i);
+    dotsBox.appendChild(d);
+  });
+
+  function update(){
+    slides.style.transform =
+       `translateX(-${index*100}%)`;
+
+    dotsBox.querySelectorAll('.dot')
+      .forEach((d,i)=>{
+        d.classList.toggle('active-dot', i===index);
+      });
+  }
+
+  window.moveSlide = function(btn,n){
+    const s = btn.closest('.slider');
+    if(s!==slider) return;
+
+    index = (index+n+imgs.length)%imgs.length;
+    update();
+  }
+
+  function go(i){
+    index=i;
+    update();
+  }
+
+  // AUTO SLIDE
+  setInterval(()=>{
+    index=(index+1)%imgs.length;
+    update();
+  },3000);
+
+  update();
+}
+// ===== ZOOM SYSTEM =====
+document.querySelectorAll('.slides img').forEach(img=>{
+  img.addEventListener('click', ()=>{
+    openZoom(img.src);
   });
 });
 
-const track = document.querySelector('.gallery-track');
-const items = document.querySelectorAll('.gallery-item');
-const leftBtn = document.querySelector('.gallery-btn.left');
-const rightBtn = document.querySelector('.gallery-btn.right');
-
-let index = 0;
-
-function updateGallery(){
-  track.style.transform = `translateX(-${index * 305}px)`;
+function openZoom(src){
+  document.getElementById('zoomImg').src = src;
+  document.getElementById('lightbox').style.display="flex";
 }
 
-rightBtn.onclick = () => {
-  index = (index + 1) % items.length;
-  updateGallery();
-};
+function closeZoom(){
+  document.getElementById('lightbox').style.display="none";
+}
 
-leftBtn.onclick = () => {
-  index = (index - 1 + items.length) % items.length;
-  updateGallery();
-};
+// close when clicking outside
+document.getElementById('lightbox').addEventListener('click', e=>{
+  if(e.target.id === "lightbox") closeZoom();
+});
+function toggleCert(btn){
 
-/* auto slide */
-setInterval(() => {
-  index = (index + 1) % items.length;
-  updateGallery();
-}, 4500);
+  const box = btn.nextElementSibling;
 
-/* lightbox */
-const lightbox = document.getElementById('lightbox');
-const lightImg = document.getElementById('lightboxImg');
+  if(box.style.display === "block"){
+    box.style.display = "none";
+    btn.innerHTML = "Understand More ▾";
+  }else{
+    box.style.display = "block";
+    btn.innerHTML = "Show Less ▴";
+  }
 
-items.forEach(item=>{
-  const img = item.querySelector('img');
-  if(img){
-    img.onclick = () => {
-      lightbox.style.display = 'flex';
-      lightImg.src = img.src;
-    };
+}
+// NAVBAR SCROLL EFFECT
+window.addEventListener("scroll", ()=>{
+  const nav = document.querySelector(".navbar");
+
+  if(window.scrollY > 60){
+    nav.classList.add("scrolled");
+  }else{
+    nav.classList.remove("scrolled");
   }
 });
+function toggleMenu(){
+  const menu = document.getElementById("navMenu");
+  const burger = document.querySelector(".hamburger");
 
-document.querySelector('.lightbox .close').onclick = () => {
-  lightbox.style.display = 'none';
-};
-/* Auto show after 5 seconds */
-setTimeout(() => {
-  document.querySelector('.float-whatsapp').classList.add('float-show');
-  document.querySelector('.float-call').classList.add('float-show');
-}, 5000);
+  menu.classList.toggle("show");
+  burger.classList.toggle("active");
+}
+
+// CLOSE MENU WHEN LINK CLICKED
+document.querySelectorAll('.nav-links a').forEach(link=>{
+  link.addEventListener('click', ()=>{
+
+    const menu = document.getElementById("navMenu");
+    const burger = document.querySelector(".hamburger");
+
+    menu.classList.remove("show");
+    burger.classList.remove("active");
+
+  });
+});
+
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

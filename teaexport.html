@@ -2046,6 +2046,101 @@ display:none !important;
 }
 
 }
+/* ===== FINAL MOBILE PATCH ===== */
+@media(max-width:768px){
+
+/* Fix hero height for phones */
+.heritage-hero{
+min-height:90vh;
+height:auto;
+padding:120px 20px 60px 20px;
+}
+
+/* Stop background jumping on phones */
+.heritage-bg{
+background-attachment:scroll !important;
+animation:none !important;
+transform:none !important;
+}
+
+/* Fix navbar overlap */
+body{
+padding-top:70px;
+}
+
+/* Reduce huge paddings */
+section,
+.intro-section,
+.trade-desk,
+.tea-portfolio{
+padding:70px 18px !important;
+}
+
+/* Stack intro layout cleanly */
+.intro-grid{
+grid-template-columns:1fr !important;
+gap:40px;
+}
+
+/* Fix intro images */
+.intro-visual{
+height:auto !important;
+display:flex;
+justify-content:center;
+}
+
+.main-img{
+position:relative !important;
+width:100%;
+max-width:420px;
+height:auto !important;
+}
+
+/* Remove decorative floating images */
+.small-img{
+display:none !important;
+}
+
+/* Fix large titles */
+.heritage-title{font-size:2rem !important;}
+.hero-title{font-size:2rem !important;}
+.lux-title{font-size:2rem !important;}
+
+/* Fix watermark overflow */
+.intro-section::after{
+display:none;
+}
+
+/* Prevent horizontal scrolling everywhere */
+html, body{
+overflow-x:hidden;
+}
+
+/* Fix buttons stacking */
+.heritage-buttons,
+.hero-buttons,
+.lux-buttons{
+flex-direction:column;
+gap:15px;
+}
+
+/* Reduce card heights */
+.tea-card{
+height:340px;
+}
+
+/* Fix footer */
+.footer{
+padding:60px 18px 25px;
+border-radius:40px 40px 0 0;
+}
+
+.footer-grid{
+grid-template-columns:1fr !important;
+gap:25px;
+text-align:center;
+}
+}
 
 </style>
 </head>
@@ -2818,3 +2913,4 @@ metricObserver.observe(box);
 </script>
 </body>
 </html>
+
